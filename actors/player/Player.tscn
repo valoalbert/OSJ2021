@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/Sprite Pack 7/1 - Diego/Running (32 x 48).png" type="Texture" id=1]
 [ext_resource path="res://assets/Sprite Pack 7/1 - Diego/Shooting_while_running (48 x 48).png" type="Texture" id=2]
@@ -313,6 +313,23 @@ transitions = [ "run", "shoot_n_run", SubResource( 11 ), "shoot_n_run", "run", S
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
+[sub_resource type="Animation" id=21]
+resource_name = "bullet_spawner_anim"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BulletSpawner:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 0.0507658, 0.0507658, 0.0507658 ),
+"update": 0,
+"values": [ Vector2( 19.636, 7.5 ), Vector2( 19.636, 5.5 ), Vector2( 19.636, 9.5 ) ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="."]
@@ -323,8 +340,8 @@ anims/shoot_n_jump = SubResource( 4 )
 anims/shoot_n_run = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-hframes = 6
+texture = ExtResource( 4 )
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.72181, 9.9619 )
@@ -336,5 +353,9 @@ anim_player = NodePath("../AnimPlayer")
 active = true
 parameters/playback = SubResource( 20 )
 
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 21.4189, 7.46225 )
+[node name="BulletSpawnerAnim" type="AnimationPlayer" parent="."]
+autoplay = "bullet_spawner_anim"
+anims/bullet_spawner_anim = SubResource( 21 )
+
+[node name="BulletSpawner" type="Position2D" parent="."]
+position = Vector2( 19.636, 7.5 )
