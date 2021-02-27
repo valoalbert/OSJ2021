@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Mercury.wav-516b3c24cc03178171eea0a373bece05.sample"
+
+[deps]
+
+source_file="res://sounds/Mercury.wav"
+dest_files=[ "res://.import/Mercury.wav-516b3c24cc03178171eea0a373bece05.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

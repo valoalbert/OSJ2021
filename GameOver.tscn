@@ -1,0 +1,137 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/godot_logo.png" type="Texture" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/Retro-Gaming/Retro Gaming.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/Retro-Gaming/Retro Gaming.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 27
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[node name="GameOver" type="CanvasLayer"]
+__meta__ = {
+"_edit_vertical_guides_": [ 386.016 ]
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 959.0
+margin_bottom = 718.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -371.5
+margin_top = -65.5
+margin_right = 371.5
+margin_bottom = 65.5
+custom_fonts/font = SubResource( 2 )
+text = "GAME OVER
+- PRESS R TO RESTART - "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -266.5
+margin_right = 260.0
+margin_bottom = 266.5
+custom_fonts/font = SubResource( 2 )
+text = "TROPIC SHOOTER
+
+
+
+
+
+
+- PRESS ENTER - "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" type="Control" parent="Control"]
+margin_left = 345.0
+margin_top = 159.0
+margin_right = 593.0
+margin_bottom = 296.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="Control/Volume"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -92.5925
+margin_top = 76.1436
+margin_right = 114.407
+margin_bottom = 92.1436
+min_value = -80.0
+max_value = 0.0
+scrollable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control/Volume"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.4744
+margin_top = 26.4919
+margin_right = 71.5256
+margin_bottom = 61.4919
+custom_fonts/font = SubResource( 4 )
+text = "Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controls" type="Label" parent="Control/Volume"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -129.597
+margin_top = 115.31
+margin_right = 149.403
+margin_bottom = 226.31
+custom_fonts/font = SubResource( 4 )
+text = "Move with arrows
+Jump with Space
+Shoot with Shift"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="godot_logo" type="Sprite" parent="Control/Volume"]
+position = Vector2( 525.304, 465.715 )
+scale = Vector2( 0.361027, 0.361027 )
+texture = ExtResource( 1 )
