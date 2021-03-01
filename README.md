@@ -1,6 +1,7 @@
 # OSJ2021
 Play the game
 https://albertvalo.itch.io/tropic-shooter
+
 One Script Game Jam 2021 entry
 Godot Game made with only one script for the whole project
 
